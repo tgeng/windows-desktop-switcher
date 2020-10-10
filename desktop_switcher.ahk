@@ -27,7 +27,7 @@ return
 ; Current desktop UUID appears to be in HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\VirtualDesktops
 ; List of desktops appears to be in HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VirtualDesktops
 ;
-mapDesktopsFromRegistry() 
+mapDesktopsFromRegistry()
 {
     global CurrentDesktop, DesktopCount
 
@@ -126,7 +126,7 @@ _switchDesktopToTarget(targetDesktop)
     focusTheForemostWindow(targetDesktop)
 }
 
-updateGlobalVariables() 
+updateGlobalVariables()
 {
     ; Re-generate the list of desktops and where we fit in that. We do this because
     ; the user may have switched desktops via some other means than the script.
@@ -192,7 +192,7 @@ getForemostWindowIdOnDesktop(n)
 MoveCurrentWindowToDesktop(desktopNumber) {
     WinGet, activeHwnd, ID, A
     DllCall(MoveWindowToDesktopNumberProc, UInt, activeHwnd, UInt, desktopNumber - 1)
-    switchDesktopByNumber(desktopNumber)
+    ; switchDesktopByNumber(desktopNumber)
 }
 
 ;

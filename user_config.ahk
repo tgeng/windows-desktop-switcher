@@ -21,6 +21,11 @@
 ; === END OF INSTRUCTIONS ===
 ; ===========================
 
+F15::switchDesktopToLeft()
+F16::switchDesktopToRight()
+
+#IfWinNotActive, gLinux - Google Chrome ahk_exe chrome.exe
+
 #1::switchDesktopByNumber(1)
 #2::switchDesktopByNumber(2)
 #3::switchDesktopByNumber(3)
