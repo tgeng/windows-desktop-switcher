@@ -21,8 +21,8 @@
 ; === END OF INSTRUCTIONS ===
 ; ===========================
 
-F15::switchDesktopToLeft()
-F16::switchDesktopToRight()
+#IfWinActive, gLinux - Google Chrome ahk_exe chrome.exe
+F16::switchDesktopToLastOpened()
 
 #IfWinNotActive, gLinux - Google Chrome ahk_exe chrome.exe
 
@@ -51,6 +51,7 @@ F16::switchDesktopToRight()
 ; CapsLock & s::switchDesktopToRight()
 ; CapsLock & a::switchDesktopToLeft()
 #tab::switchDesktopToLastOpened()
+F16::switchDesktopByNumber(9)
 
 ; CapsLock & c::createVirtualDesktop()
 ; CapsLock & d::deleteVirtualDesktop()
