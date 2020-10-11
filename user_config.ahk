@@ -23,6 +23,7 @@
 
 #IfWinActive, gLinux - Google Chrome ahk_exe chrome.exe
 F16::switchDesktopToLastOpened()
+!Space::Return
 
 #IfWinNotActive, gLinux - Google Chrome ahk_exe chrome.exe
 
